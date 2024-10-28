@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>افزودن آیتم به لیست</title>
+</head>
+<body>
+
+<ul id="myList">
+</ul>
+
+<button onclick="addItem()">افزودن آیتم به لیست</button>
+
+<script>
+function addItem() {
+    // ایجاد المان li جدید
+    const newItem = document.createElement("li");
+    // متن المان li جدید
+    newItem.textContent = "آیتم جدید";
+
+    // اضافه کردن المان جدید به ul
+    document.getElementById("myList").appendChild(newItem);
+}
+</script>
+
+</body>
+</html>
