@@ -67,11 +67,23 @@ document
 //   newItem.textContent = "آیتم جدید";
 //   document.getElementById("myList").appendChild(newItem);
 // }
-
-
-
-
-
-
-
+document.querySelector("#bt").addEventListener("click", itemezaf);
+function itemezaf() {
+  const itemJadid = document.createElement("li");
+  itemJadid.innerText = "آیتم جدید تست";
+  document.querySelector("#listMan").appendChild(itemJadid);
+}
 // Tamrin-5
+document.getElementById("myForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const nameInput = document.getElementById("nameInput").value.trim();
+
+  if (nameInput === "") {
+    document.getElementById("errorMessage").style.display = "block";
+  } else {
+    document.getElementById("errorMessage").style.display = "none";
+
+    alert("فرم ارسال شد!");
+  }
+});
