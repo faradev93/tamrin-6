@@ -77,7 +77,7 @@ function itemezaf() {
 document.getElementById("myForm").addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const nameInput = document.getElementById("nameInput").value.trim();
+  const nameInput = document.getElementById("nameInput").value;
 
   if (nameInput === "") {
     document.getElementById("errorMessage").style.display = "block";
